@@ -4,6 +4,7 @@
 When things don't seem to be going your way, always keep in mind that god has a plan for you!
 
 # Content
+## [First Post](https://github.com/huweitao/Memo/blob/master/%E5%89%8D%E8%A8%80.md);
 
 You can use the [editor on GitHub](https://github.com/huweitao/Memo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
