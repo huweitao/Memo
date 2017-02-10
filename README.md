@@ -1,11 +1,13 @@
 ## Welcome to Hu's Cabin
 
+# Note
+When things don't seem to be going your way, always keep in mind that god has a plan for you!
+
+# Content
+
 You can use the [editor on GitHub](https://github.com/huweitao/Memo/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-# Note
-When things don't seem to be going your way, always keep in mind that god has a plan for you!
 
 ### Markdown
 
