@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg936\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fnil\fcharset0 Menlo-Bold;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red65\green182\blue69;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww27480\viewh11240\viewkind0
+\deftab741
+\pard\tx741\pardeftab741\pardirnatural\partightenfactor0
+
+\f0\b\fs30 \cf2 \CocoaLigature0 // normal plus ios10\cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.6086956521739131\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x171c26c60; size = 1242.000000 x 2208.000000>\cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 1080, height = 1920))\cf1 \
+        \cf2 // scale 
+\f1 \'c4\'a3\'ca\'bd
+\f0 \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.8799999999999999\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x171821b60; size = 1125.000000 x 2001.000000>\cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 1080, height = 1920))\cf1 \
+        \
+        \cf2 // normal plus ios8.3\cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 1080, height = 1920))\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x17403b0c0; size = 1242.000000 x 2208.000000>\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.6086956521739131\cf1 \
+        \
+        \cf2 // scale plus ios8.3\cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.8799999999999999\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x170234920; size = 1125.000000 x 2001.000000>\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 1080, height = 1920))\cf1 \
+\
+        \
+        \cf2 // iphone 5s\cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 640, height = 1136))\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x170227600; size = 640.000000 x 1136.000000>\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2\cf1 \
+        \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2\cf1 \
+        \
+        \cf2 // iphone 6 ios9\cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] currentMode]\cf1 \
+\cf2 //        <UIScreenMode: 0x12dfa8d40; size = 750.000000 x 1334.000000>\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [[UIScreen mainScreen] nativeBounds]\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 750, height = 1334))\cf1 \
+        \
+        \cf2 // plus normal ios9\cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].currentMode\cf1 \
+\cf2 //        <UIScreenMode: 0x17022dce0; size = 1242.000000 x 2208.000000>\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.6086956521739131\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].currentMode\cf1 \
+\cf2 //        <UIScreenMode: 0x17022dce0; size = 1242.000000 x 2208.000000>\cf1 \
+        \
+        \cf2 // plus scale ios9\cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeBounds\cf1 \
+\cf2 //        (origin = (x = 0, y = 0), size = (width = 1080, height = 1920))\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].nativeScale\cf1 \
+\cf2 //        2.8799999999999999\cf1 \
+\cf2 //        \cf1 \
+\cf2 //        (lldb) po [UIScreen mainScreen].currentMode\cf1 \
+\cf2 //        <UIScreenMode: 0x1702243a0; size = 1125.000000 x 2001.000000>}
