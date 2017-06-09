@@ -1,10 +1,10 @@
-#AES加密
-##背景知识
+# AES加密
+## 背景知识
 高级加密标准（Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。但是严格地说，AES和Rijndael加密法并不完全一样（虽然在实际应用中二者可以互换），因为Rijndael加密法可以支持更大范围的区块和密钥长度：AES的区块长度固定为128bit（如果数据块及密钥长度不足时，会补齐），密钥长度则可以是128bit，192bit或256bit；而Rijndael使用的密钥和区块长度可以是32位的整数倍，以128位为下限，256比特为上限。加密过程中使用的密钥是由Rijndael密钥生成方案产生。
 ##需要注意的问题
 引入`#import <CommonCrypto/CommonCryptor.h>`后，还需要两个参数来完成加密，一个是秘钥key，第二个是秘钥向量iv。
 
-###1. AES秘钥key的生成
+### 1. AES秘钥key的生成
 iOS端没有类似android的[秘钥生成器接口](http://blog.csdn.net/playboyanta123/article/details/8044837)，目前暂时使用的是产生16位随机字符串，方法如下：
 
 ```
@@ -43,10 +43,10 @@ static const NSString *randomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL
 	}
 ```
   
-###2.秘钥向量iv
+### 2.秘钥向量iv
 iv是配合AES的加密模式来使用的，加大密文被破解的难度。（一般有CBC、ECB、CTR、OCF和CFB[五种加密模式](http://www.cnblogs.com/starwolf/p/3365834.html?utm_source=tuicool&utm_medium=referral)，这几种加密模式的对比参看[这篇文章](http://www.cnblogs.com/happyhippy/archive/2006/12/23/601353.html)）。
 
-###3.接口参数
+### 3.接口参数
 
 ```
 		CCCryptorStatus CCCrypt(
