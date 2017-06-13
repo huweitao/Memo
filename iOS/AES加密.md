@@ -10,12 +10,12 @@ iOS端没有类似android的[秘钥生成器接口](http://blog.csdn.net/playboy
 ```
 static const NSString *randomAlphabet = @"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 + (NSString *)generateSecureRandomStringLength:(NSUInteger)len
-		{
-			NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
-			for (int i = 0; i < len; i++) {
+{
+	NSMutableString *randomString = [NSMutableString stringWithCapacity:len];
+	for (int i = 0; i < len; i++) {
         	[randomString appendFormat: @"%C", [randomAlphabet characterAtIndex:arc4random_uniform((u_int32_t)[randomAlphabet length])]];
-		}
-		return randomString;
+	}
+	return randomString;
 }
 ```      
 为了满足随机的要求，可以在得到随机字符串后再做一次[Fisher-Yates Shuffle](https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle)（[洗牌算法](http://www.cnblogs.com/tudas/p/3-shuffle-algorithm.html?utm_source=tuicool&utm_medium=referral)），代码如下：
@@ -69,4 +69,4 @@ a. kCCEncrypt：选择kCCAlgorithmAES128即可；
 
 b. iv： 如果使用ECB方式加密就不需要初始化向量，设置为nil就可以了。如果不是采用ECB，那么除了密钥之外，加密方和解密方的初始化向量也必须一致。
 
-c. options： 选择填充模式，一般是kCCOptionPKCS7Padding（iOS这边的选项就kCCOptionPKCS7Padding和kCCOptionECBMode两种)。为了后台能使用统一的加解密逻辑，android的AES加密可使用PKCS5Padding模式，因为PKCS7Padding和PKCS5Padding是兼容的。（填充模式可以看[这篇文章](http://www.cnblogs.com/midea0978/articles/1437257.html)）。
+c. options： 选择填充模式，一般是kCCOptionPKCS7Padding（iOS这边的选项就kCCOptionPKCS7Padding和kCCOptionECBMode两种)。为了后台能使用统一的加解密逻辑，android的AES加密可使用PKCS5Padding模式，因为PKCS7Padding和PKCS5Padding是兼容的（填充模式可以看[这篇文章](http://www.cnblogs.com/midea0978/articles/1437257.html)）。
