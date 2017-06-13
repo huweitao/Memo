@@ -1,8 +1,8 @@
 
 ## 背景知识
 高级加密标准（Advanced Encryption Standard，缩写：AES），在密码学中又称Rijndael加密法，是美国联邦政府采用的一种区块加密标准。但是严格地说，AES和Rijndael加密法并不完全一样（虽然在实际应用中二者可以互换），因为Rijndael加密法可以支持更大范围的区块和密钥长度：AES的区块长度固定为128bit（如果数据块及密钥长度不足时，会补齐），密钥长度则可以是128bit，192bit或256bit；而Rijndael使用的密钥和区块长度可以是32位的整数倍，以128位为下限，256比特为上限。加密过程中使用的密钥是由Rijndael密钥生成方案产生。
-##需要注意的问题
-引入`#import <CommonCrypto/CommonCryptor.h>`后，还需要两个参数来完成加密，一个是秘钥key，第二个是秘钥向量iv。
+
+>注：引入`#import <CommonCrypto/CommonCryptor.h>`后，还需要两个参数来完成加密，一个是秘钥key，第二个是秘钥向量iv。
 
 ### 1. AES秘钥key的生成
 iOS端没有类似android的[秘钥生成器接口](http://blog.csdn.net/playboyanta123/article/details/8044837)，目前暂时使用的是产生16位随机字符串，方法如下：
