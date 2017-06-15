@@ -13,7 +13,7 @@
 修改布局坐标系选取的逻辑，把之前获取`width`和`height`宏直接替换成绝对的宽和高即可。
 
 ## 思考与总结
-选取界面布局的坐标系参考一定要严谨和统一，尤其是在iOS设备上，宽和高是完全可以区分的情况下（横屏宽永远大于高，竖屏则反之），代码直接给出绝对的宽和高是比较保险的做法，以下是横屏的例子：
+选取界面布局的坐标系参考一定要严谨和统一，尤其是在iOS设备上，宽和高是完全可以区分的情况下（横屏app的宽永远大于高，竖屏则反之），代码直接给出绝对的宽和高是比较保险的做法，以下是横屏的例子：
 
 		OC代码
 		#define STD_SCREEN_WIDTH (([UIScreen mainScreen].bounds.size.height < [UIScreen mainScreen].bounds.size.width?[UIScreen mainScreen].bounds.size.height : [UIScreen mainScreen].bounds.size.width))
