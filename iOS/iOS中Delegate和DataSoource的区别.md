@@ -1,4 +1,3 @@
-# iOS中Delegate和DataSoource的区别
 Delegation and Notifications
 The delegate of most Cocoa framework classes is automatically registered as an observer of notifications posted by the delegating object. The delegate need only implement a notification method declared by the framework class to receive a particular notification message. Following the example above, a window object posts an NSWindowWillCloseNotification to observers but sends a windowShouldClose: message to its delegate.
 
