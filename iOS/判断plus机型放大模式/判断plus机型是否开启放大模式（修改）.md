@@ -3,7 +3,7 @@
 在一些plus机型上，处于放大模式的状态下，app的部分界面布局会有问题。因此，需要一种可以检测手机开启了放大模式的方法。
 ## 一些统计数据
 plus机型对应的一些属性参数，在标准模式和放大模式是不一样的，且这些参数都是固定的，与系统无关(iOS8～iOS10上均有测试，
-如果不太清楚下图中的三个属性，可以参考[`UIScreen`Apple文档的解释](https://developer.apple.com/reference/uikit/uiscreen?language=objc))，有图有真相：
+如果不太清楚下图中的三个属性，可以参考[Apple文档关于UIScreen的描述](https://developer.apple.com/reference/uikit/uiscreen?language=objc))，有图有真相：
 
 ![](./statistic.png)
 
