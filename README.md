@@ -1,6 +1,6 @@
-## Welcome to Hu's Cabin
-
-# Note
+# Welcome to Hu's Cabin
+## Welcome to my [git page!](https://huweitao.github.io/Memo/)
+## Note
 When things don't seem to be going your way, always keep in mind that god has a plan for you!
 
 # Content
