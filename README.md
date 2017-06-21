@@ -1,7 +1,6 @@
 # Welcome to Hu's Cabin
-## Welcome to my [git page!](https://huweitao.github.io/Memo/)
-## Note
-When things don't seem to be going your way, always keep in mind that god has a plan for you!
+
+## See my [git page!](https://huweitao.github.io/Memo/)
 
 # Content
 1. [GitHub的MarkDown语法](https://github.com/huweitao/Memo/blob/master/GitHub%E7%9A%84MarkDown%E8%AF%AD%E6%B3%95.md);
