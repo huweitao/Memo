@@ -8,4 +8,4 @@ A data source is almost identical to a delegate. The difference is in the relati
 
 -- [Apple Document Delegation](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Protocol.html#//apple_ref/doc/uid/TP40008195-CH45-SW1)
 
-总结就是：DataSource和Delegate都是基于protocol概念来实现的，实现的方式也是一样的。但是DataSource需要向代理对象提供数据，这样的话DataSource还引用了被代理对象的数据（开发者一般在DataSource里主动创建数据），所以还需要负责内存管理。
+总结大致是：DataSource和Delegate都是基于protocol概念来实现的，实现的方式也是一样的。但是DataSource需要向代理对象提供数据，这样的话DataSource还引用了被代理对象的数据（开发者一般在DataSource里主动创建数据），所以开发者需要主动负责DataSource的内存管理。
