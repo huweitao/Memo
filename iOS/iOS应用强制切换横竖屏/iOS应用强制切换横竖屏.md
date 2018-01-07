@@ -1,8 +1,8 @@
-#iOS应用强制切换横竖屏
-##背景及需求
+# iOS应用强制切换横竖屏
+## 背景及需求
 原项目产品设计之初只支持横屏，但是随着产品需求的升级，产品需要添加竖屏支持来满足更多操作环境下的用户需求。
 
-##方案调研及存在问题
+## 方案调研及存在问题
 1. 基于手机的系统通知，当`UIInterfaceOrientation`变化时，通过监听相关通知来修改布局。这种通过监听方向变化的方式来改变布局的解决方案与需求不符。
 2. 利用`transform`+修改`bounds`来改变`UIViewController`的`view`来模拟横竖屏效果，淡淡这样做并不能改变keyboard出现的方向。
 3. 修改'[UIDevice currentDevice].orientation'的值来切换方向，亲测`iOS8`以上没有效果，而且`orientation`值的修改一般需要使用私有接口，审核上也会存在风险。
@@ -14,12 +14,12 @@
 
 但是需求是要求立即切换方向，展示一个新的`UIViewController`明显维护起来很费事。
 
-##需求目标
+## 需求目标
 1. 切换方向后整体布局的坐标正确：bounds和frame与方向变化一致。
 2. 切换方向后系统状态栏位置正确：Status Bar与方向变化一致
 3. 切换方向后键盘弹出的位置正确：keyboard出现的方向与方向变化一致
 
-##方案实现的关键点
+## 方案实现的关键点
 
 1. 考虑到有Base NavigationController，所以transform变化需要从NavigationController下手。
 2. Status Bar的方向可以通过以下接口设定：
@@ -56,7 +56,7 @@
 
 这种情况需要在`ViewDidLoad`的时候检测一次，作为调整`transform`逻辑的参考即可。
 
-##总结
+## 总结
 强制横竖屏能满足以下四个目标即可：
 
 1. Status bar位置正确
