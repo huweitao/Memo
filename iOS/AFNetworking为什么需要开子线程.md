@@ -137,7 +137,7 @@ Which is meant to schedule your delegate callbacks on a specific operation queue
 
 2. When i wrote NSURLConnectionOperation i meant AFURLConnectionOperation. I corrected that thanks for mentioning it :)
 
-##答案总结起来就3点
+## 答案总结起来就3点
 1. 单独的线程方便管理多个operation；
 2. NSURLConnection回调需要runloop，开启新线程保障不会因为多个NSURLConnection回调卡住当前线程runloop（一般是主线程）；
 3. 历史遗留问题，iPhone 4s and iOS 5 出来的时候，如果APP在后台，只能通过创建线程这种方式才能收到NSURLConnection的回调。
