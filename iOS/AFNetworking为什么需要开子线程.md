@@ -1,7 +1,7 @@
-###AFNetworking - Why does it spawn a network request thread?
+### AFNetworking - Why does it spawn a network request thread?
 [--转自stackoverflow](https://stackoverflow.com/questions/13844000/afnetworking-why-does-it-spawn-a-network-request-thread)
 
-##Question
+## Question
 
 I'm trying to understand Operations and Threads better, and looked to AFNetworking's AFURLConnectionOperation subclass for example, real-world, source code.
 
