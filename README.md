@@ -11,5 +11,6 @@
 6. [探索Spotlight实时搜索](https://github.com/huweitao/Memo/blob/master/iOS/%E6%8E%A2%E7%B4%A2Spotlight%E5%AE%9E%E6%97%B6%E6%90%9C%E7%B4%A2/%E6%8E%A2%E7%B4%A2Spotlight%E5%AE%9E%E6%97%B6%E6%90%9C%E7%B4%A2.md)
 7. [PB的使用](https://github.com/huweitao/Memo/blob/master/iOS/PB%E7%9A%84%E4%BD%BF%E7%94%A8/ProtocolBuffer%E7%9A%84%E4%BD%BF%E7%94%A8.md)
 8. [iOS屏幕任意切换方向](https://github.com/huweitao/Memo/blob/master/iOS/iOS%E5%BA%94%E7%94%A8%E5%BC%BA%E5%88%B6%E5%88%87%E6%8D%A2%E6%A8%AA%E7%AB%96%E5%B1%8F/iOS%E5%BA%94%E7%94%A8%E5%BC%BA%E5%88%B6%E5%88%87%E6%8D%A2%E6%A8%AA%E7%AB%96%E5%B1%8F.md)
+9.[AFNetWorking与子线程](https://github.com/huweitao/Memo/blob/master/iOS/AFNetworking%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%BC%80%E5%AD%90%E7%BA%BF%E7%A8%8B.md)
 
 And More..
