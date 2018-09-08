@@ -1,5 +1,5 @@
-# xcode9免证书调试
-##配置流程
+# XCode9免证书调试
+## 配置流程
 1. 进入xcode，菜单栏选择XCode –> preferences，在Accounts选项卡添加自己的Apple ID
 ![](./1.png)
 
