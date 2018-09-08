@@ -10,7 +10,6 @@
 ![](./3.png)
 
 4. 修改bundleID，如果工程是具体的ID（specific bundleID），需要改为'com.testproj.*'即可(因为免费开发者证书生成的profile是通配方式)
-![](./4.png)
 
 5. 进入工程，勾选Automatically manage signing，team选择刚才注册的账号。这里注意，免费开发者证书只有7天，过期后需要重新申请。
 ![](./5.png)
