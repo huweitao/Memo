@@ -1,4 +1,4 @@
-##AntDesign相关问题
+## AntDesign相关问题
 
 1. `yarn add/remove package` 相关包以后，需要运行 `npm install babel-types`，兼容语法问题
 2. 第一次运行项目需要安装ant依赖和相关脚手架[链接]
