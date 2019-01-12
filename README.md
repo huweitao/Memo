@@ -17,4 +17,5 @@
 12. [Mac环境Jenkins安装](https://github.com/huweitao/Memo/blob/master/Jenkins%E9%85%8D%E7%BD%AE/Mac%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85Jenkins.md)
 13. [自动为Xcode工程添加文件](https://github.com/huweitao/Memo/blob/master/Xcode%20Project/%E8%87%AA%E5%8A%A8%E4%B8%BAXcode%20project%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6.md)
 14. [Python 相关](https://github.com/huweitao/Memo/tree/master/Python)
+15. [Ubuntu 相关](https://github.com/huweitao/Memo/tree/master/linux_ubuntu)
 And More..
