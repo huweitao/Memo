@@ -14,5 +14,6 @@
 9. [AFNetWorking与子线程](https://github.com/huweitao/Memo/blob/master/iOS/AFNetworking%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81%E5%BC%80%E5%AD%90%E7%BA%BF%E7%A8%8B.md)
 10. [Xcode9免证书真机调试](https://github.com/huweitao/Memo/blob/master/iOS/xcode%E5%85%8D%E8%AF%81%E4%B9%A6%E8%B0%83%E8%AF%95/xcode9%E5%85%8D%E8%AF%81%E4%B9%A6%E8%B0%83%E8%AF%95.md)
 11. [Siwft与OC混编](https://github.com/huweitao/Memo/blob/master/iOS/OC%E4%B8%8Eswift%E6%B7%B7%E7%BC%96/OC%E4%B8%8Eswift%E6%B7%B7%E7%BC%96%E6%A8%A1%E5%BC%8F.md)
-
+12. [Mac环境Jenkins安装](https://github.com/huweitao/Memo/blob/master/Jenkins%E9%85%8D%E7%BD%AE/Mac%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85Jenkins.md)
+13. [自动为Xcode工程添加文件](https://github.com/huweitao/Memo/blob/master/Xcode%20Project/%E8%87%AA%E5%8A%A8%E4%B8%BAXcode%20project%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6.md)
 And More..

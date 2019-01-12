@@ -1,0 +1,9 @@
+1、安装连接 https://www.jianshu.com/p/48f68686d114
+
+notes:
+0、权限问题一律使用chmod -R 777 dir
+
+1、一定要添加Jenkins账户到管理员权限，为了jenkins访问本机的keychain和profile文件
+进入mac系统偏好设置 — 用户与群组 — 其他用户 — jenkins ，勾选允许用户管理这台电脑，并右键选择高级选项，将名字改为jenkins
+
+2、
