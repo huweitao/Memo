@@ -1,0 +1,5 @@
+
+
+gem 安装提示权限问题解决方案
+
+sudo gem install cocoapods -n /usr/local/bin,链接：https://www.jianshu.com/p/b8406ff1e2f1
