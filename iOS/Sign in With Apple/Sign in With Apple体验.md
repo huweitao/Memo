@@ -39,6 +39,7 @@ WWDC 2019 Apple 公布了“Sign In with Apple”框架，可通过 Face ID/Touc
 
 ## 参考Demo
 ![](./demo_gif.gif)
+
 Demo地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 
 
@@ -50,5 +51,5 @@ Demo地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 2. [Sign In with Apple - 使用苹果账号登录你的应用](https://xiaozhuanlan.com/topic/8675913204)
 
 ## 下载链接
-1. WWDC 2019提供的新版macOS, xcode, iOS[下载链接](https://developer.apple.com/download/#ios-restore-images-iphone-new)
-2. Sign In with Apple demo project[下载链接](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
+1. WWDC 2019提供的新版macOS, XCode, iOS [下载链接](https://developer.apple.com/download/#ios-restore-images-iphone-new)
+2. Sign In with Apple offical demo project [download](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
