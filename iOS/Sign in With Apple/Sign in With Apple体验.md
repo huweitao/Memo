@@ -1,4 +1,4 @@
-# Sign in with Apple体验与思考
+# Sign in with Apple体验
 
 ## 功能背景
 WWDC 2019 Apple 公布了“Sign In with Apple”框架，可通过 Face ID/Touch ID/密码 验证来创建账户并保证不泄露用户隐私信息。每次通过“Sign In with Apple”登录时，可以选择实际邮箱或者创建一个随机邮箱（随机邮箱的邮件会转发至用户实际邮箱）；且用户可以随时删除已创建的随机邮箱。新版苹果审核条例明确要求符合条件的APP接入"Sign In with Apple"：[Updates to the App Store Review Guidelines](https://developer.apple.com/news/?id=06032019j)。
