@@ -1,8 +1,8 @@
 # Sign in with Apple体验
 
 ## 功能背景
-WWDC 2019 Apple 公布了“Sign In with Apple”框架，可通过 Face ID/Touch ID/密码 验证来创建账户并保证不泄露用户隐私信息。每次通过“Sign In with Apple”登录时，可以选择实际邮箱或者创建一个随机邮箱（随机邮箱的邮件会转发至用户实际邮箱）；且用户可以随时删除已创建的随机邮箱。新版苹果审核条例明确要求符合条件的APP接入"Sign In with Apple"：[Updates to the App Store Review Guidelines](https://developer.apple.com/news/?id=06032019j)。
-## 能力特性
+WWDC 2019 Apple 公布了“Sign In with Apple”框架(详情见[video](https://developer.apple.com/videos/play/wwdc2019/706/))，可通过 Face ID/Touch ID/密码 验证来创建账户并保证不泄露用户隐私信息。每次通过“Sign In with Apple”登录时，可以选择实际邮箱或者创建一个随机邮箱（随机邮箱的邮件会转发至用户实际邮箱）；且用户可以随时删除已创建的随机邮箱。新版苹果审核条例明确要求符合条件的APP接入"Sign In with Apple"：[Updates to the App Store Review Guidelines](https://developer.apple.com/news/?id=06032019j)。
+## 功能特性
 [官网介绍](https://developer.apple.com/sign-in-with-apple/)
 ![](./ppt_signin_content.png)
 
@@ -10,8 +10,11 @@ WWDC 2019 Apple 公布了“Sign In with Apple”框架，可通过 Face ID/Touc
 2. Higher level security：Built-in security和Anti-fraud强调系统提供账号安全验证机制；
 3. Multiply-platform：通过统一ID提供便捷的关联多平台数据的能力（包括网页）；
 
-## 能力实现
-多数资料猜测Sign in With Apple是基于OAuth2.0。[nativescript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)，[[App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)。
+## 功能分析
+多数资料分析Sign in With Apple是基于OAuth2.0协议，实际上[AuthenticationServices](https://developer.apple.com/documentation/authenticationservices?language=objc)确实是标准的OAuth协议，app和浏览器可通过协议共享用户数据，属于SSO模式（单点登录）。资料包括：[nativescript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)，[[App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)。
+
+## 问题答疑
+[链接](https://techcrunch.com/2019/06/07/answers-to-your-burning-questions-about-how-sign-in-with-apple-works/)
 
 ## 现有影响
 ### 对用户
@@ -47,12 +50,13 @@ Demo地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 
 
 ## 最后总结
-接入成本不高，对国内已有成熟账号体系的APP而言，只是增加一个第三方登录授权的渠道，但提供增益较低。但对于Apple生态而言，基于系统级别的一账通，打通了Apple体系内多个平台，将不同平台的用户的数据可关联起来可以衍生出很多服务与产品，值得期待Apple下一步的动作
+新功能接入成本不高，对国内已有成熟账号体系的APP而言，也只是增加一个第三方登录授权的渠道，对已有账号体系提供的增益较低。但对于Apple生态而言，基于系统级别的一账通，打通了Apple体系内多个平台。有了一账通，很容易将Apple体系内不同平台的的数据关联起来，预测后期很多服务与产品来自于这些数据的分析，值得期待Apple下一步的动作
 
 ## 参考资料
 1. [苹果表示iOS 13使用Apple登录按钮比输入密码更加安全](http://www.sohu.com/a/320191816_586435?scm=1002.0.0.0-0)
 2. [Sign In with Apple - 使用苹果账号登录你的应用](https://xiaozhuanlan.com/topic/8675913204)
 3. [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
+4. [Sign-in-with-Apple for web pages](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
 
 ## 下载链接
 1. WWDC 2019提供的新版macOS, XCode, iOS [下载链接](https://developer.apple.com/download/#ios-restore-images-iphone-new)
