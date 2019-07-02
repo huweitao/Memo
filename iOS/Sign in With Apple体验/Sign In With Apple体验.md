@@ -41,15 +41,15 @@ WWDC 2019 Apple 公布了 Sign In With Apple 框架(详情见[链接](https://de
 3. 对国内已有成熟账号体的APP系贡献不大：返回用户信息数据过于简单，对于有风控需求的APP，Apple这套授权登录体系对开发者（服务提供商）显得过于单薄。
 
 ## 参考Demo
-1. [Start Sign In with Apple](https://developer.apple.com/sign-in-with-apple/get-started/)
-2. demo演示，下载地址：[链接](https://github.com/huweitao/AppleSampleJuice)
+1. 相关框架和接口：[Start Sign In with Apple](https://developer.apple.com/sign-in-with-apple/get-started/)
+2. Demo 演示，下载地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 ![](./demo_gif.gif)
 
 3. Apple 下发的 Token 验证与解析可参考另外一篇[文章](https://github.com/huweitao/Memo/blob/master/iOS/Sign%20in%20With%20Apple%E6%8E%88%E6%9D%83%E5%8E%9F%E7%90%86/Sign%20in%20With%20Apple%E6%8E%88%E6%9D%83%E5%8E%9F%E7%90%86.md)
 
 
 ## 最后总结
-新功能接入成本不高，对国内已有成熟账号体系的APP而言，也只是增加一个第三方登录授权的渠道，对已有账号体系提供的增益较低。但对于Apple生态而言，基于系统级别的一账通，打通了Apple体系内多个平台。有了一账通，很容易将Apple体系内不同平台的的数据关联起来，预测后期很多服务与产品来自于这些数据的分析，值得期待Apple下一步的动作
+新功能接入成本不高，对国内已有成熟账号体系的APP而言，也只是增加一个第三方登录授权的渠道，对已有账号体系提供的增益较低。但对于Apple生态而言，基于系统级别的一账通，打通了Apple体系内多个平台。有了一账通，很容易将 Apple 体系内不同硬件平台的的数据关联起来，预测后面可能很多 Apple 的服务与产品来自于对这些数据的分析和挖掘，值得期待 Apple 下一步的动作。
 
 ## 参考资料
 1. [苹果表示iOS 13使用Apple登录按钮比输入密码更加安全](http://www.sohu.com/a/320191816_586435?scm=1002.0.0.0-0)
