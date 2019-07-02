@@ -28,19 +28,19 @@ WWDC 2019 Apple 公布了 Sign In With Apple 框架(详情见[链接](https://de
 4. Apple登录的UI需要遵循Apple的设计原则（强制）：[链接](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
 
 ## 接入步骤
-### App方式
+### App接入
 ![](integration.png)
 1. 工程需要添加能力：Sign in with Apple
 ![key](./signInAppleProj.png)
 ![key](./signInAppleKey.png)
 2. 目前测试显示：一个Apple账号会对应一个ID，也就是说：删掉App/切换机器/系统重置，返回的ID都不会变化。
 
-### Web方式
-网页是通过导入 JS-SDK 的方式接入的，Apple 官网给出了[demo](https://developer.apple.com/documentation/signinwithapplejs/configuring_your_webpage_for_sign_in_with_apple)。这个demo运行所需的前置条件有：
+### Web接入
+网页是通过导入 JS-SDK 的方式接入的，Apple 官网给出了[demo](https://developer.apple.com/documentation/signinwithapplejs/configuring_your_webpage_for_sign_in_with_apple)，登录界面的效果应该类似于 Apple Developer Center。这个demo运行所需的[前置条件](https://stackoverflow.com/questions/56442900/how-to-use-sign-in-with-apple-with-apple-js)：
 
 1. HTTPS域名；
 2. Apple Developer 账号；
-3. Developer Center 中绑定AppID和对应域名；
+3. Apple Developer Center 中绑定AppID和对应域名；
 
 由于目前没有自己的HTTPS域名，笔者只能停在Developer Center的注册界面。如果想申请域名，[参考链接](https://jeffrycheng.com/2017/03/14/%E5%9F%9F%E5%90%8D%E7%94%B3%E8%AF%B7%E5%8F%8Ahttps%E9%85%8D%E7%BD%AE/)![](./sign_in_with_apple_web.png)
 
