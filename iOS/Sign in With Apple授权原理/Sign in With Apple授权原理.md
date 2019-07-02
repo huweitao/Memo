@@ -19,8 +19,8 @@ JSON Web Token，简称JWT，其本质是一个 Access Token，存储于客户�
 JWT由三部分组成：
 
 1. header（头部）:头部内容会说明类型和使用的算法;![](./header.png)
-- payload（载荷）:载荷中有五个字段是由JWT的标准所定义，其他字段可根据需要自行添加![](./payload.png)
-- signature（签名）:将header和payload通过header里面的alg指定的加密算法(默认是 HMAC SHA256，Apple是RS256)得到的一个字符串。![](./signature.png)
+2. payload（载荷）:载荷中有五个字段是由JWT的标准所定义，其他字段可根据需要自行添加![](./payload.png)
+3. signature（签名）:将header和payload通过header里面的alg指定的加密算法(默认是 HMAC SHA256，Apple是RS256)得到的一个字符串。![](./signature.png)
 
 
 ## Sign In With Apple JWT解析
@@ -29,9 +29,11 @@ JWT由三部分组成：
 1. Sign In With Apple 返回的JWT结构：
 
 		eyJraWQiOiJBSURPUEsxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLmV4YW1wbGUuYXBwbGUtc2FtcGxlY29kZS5qdWljZUhDOFJFMlJWODYiLCJleHAiOjE1NjE5NzMxMDgsImlhdCI6MTU2MTk3MjUwOCwic3ViIjoiMDAwODA2LmU3ZGIzOGMwYjgzOTQyZGJiYmZkNjI2ODFlM2FkOTIyLjAzMTgifQ.GDZ2iGD7qOxRAsrPv7CWiaWFMB1oY-pvpL4IgcU2iF2hBFBHIFXG1fuDqmNEOYVUE03lp3KiPe4NbxJ0FKeHagKSfv-xV-w-34ARqHkZidPAQxQwMSIyyqQwj4NA0k5jz4xUs3JMt76m8BufdfSXPPqrMZrvMw4HrBgqjrBFg83dGmp3zDf1GJuG5qMG5r-yuSZewbQT2aMTRalm-7078fpm5G81tOKyPK8mw5gE4V5tY4SIhK0_BkFPE6Y2fxExp7KtJXUjxATLAqUB7Lpg6-v7UtoOW5n_CBsTijFtilraQOQMF7ASsuhCGHZGMu-XbAr-BDqPDXlP2QD-M4cjHA	
-- JWT解析可知，加密算法为RS256，需要Apple的公钥来验证签名
+		
+2. JWT解析可知，加密算法为RS256，需要Apple的公钥来验证签名
 ![](./jwt_encode_decode.png)
-- [Auth Service API](https://developer.apple.com/documentation/signinwithapplerestapi/fetch_apple_s_public_key_for_verifying_token_signature) 提供了获取公钥的参数，返回的数据如下：
+
+3. [Auth Service API](https://developer.apple.com/documentation/signinwithapplerestapi/fetch_apple_s_public_key_for_verifying_token_signature) 提供了获取公钥的参数，返回的数据如下：
 
 		{"keys":[
 	        {
@@ -44,26 +46,27 @@ JWT由三部分组成：
 	        }
         ]}
 keys中的字段说明可以从 [Apple JWTSet](https://developer.apple.com/documentation/signinwithapplerestapi/jwkset/keys) 文档获取
-- 生成公钥，通过参数n(Modulus)和e(Exponent)能生成对应的公钥（[RSA公钥与模数 指数的关系](https://www.cnblogs.com/masako/p/7660418.html)，[RSA标准](https://crypto.stackexchange.com/questions/18031/how-to-find-modulus-from-a-rsa-public-key)），具体可参考代码实现。
+
+4. 生成公钥，通过参数n(Modulus)和e(Exponent)能生成对应的公钥（[RSA公钥与模数 指数的关系](https://www.cnblogs.com/masako/p/7660418.html)，[RSA标准](https://crypto.stackexchange.com/questions/18031/how-to-find-modulus-from-a-rsa-public-key)），具体可参考代码实现。
 
 ## JWT验证代码实现(Python)
 1. 代码[链接](https://github.com/huweitao/PythonScripts/blob/master/AppleAuthVerify.py)
-- 输入：JWT 和 Audience
-- 运行方式如下：
+2. 输入：JWT 和 Audience
+3. 运行方式如下：
 	
 		python AppleAuthVerify.py jwt aud
 
 ## 参考资料
 1. [JWT入门](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
-- [NodeJS解析JWT](https://www.jianshu.com/p/2036987a22fb)
-- [Python解析JWT](https://segmentfault.com/a/1190000010312468)
-- [JSON Web Token (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32)
-- [在Web应用间安全地传递信息](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
-- [八幅漫画理解使用JSON Web Token设计单点登录系统](http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/)
-- [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
+2. [NodeJS解析JWT](https://www.jianshu.com/p/2036987a22fb)
+3. [Python解析JWT](https://segmentfault.com/a/1190000010312468)
+4. [JSON Web Token (JWT)](https://tools.ietf.org/html/draft-ietf-oauth-json-web-token-32)
+5. [在Web应用间安全地传递信息](http://blog.leapoahead.com/2015/09/06/understanding-jwt/)
+6. [八幅漫画理解使用JSON Web Token设计单点登录系统](http://blog.leapoahead.com/2015/09/07/user-authentication-with-jwt/)
+7. [理解OAuth 2.0](http://www.ruanyifeng.com/blog/2014/05/oauth_2_0.html)
 
 ## 相关链接
 1. [JWT在线验证](https://jwt.io/)
-- [在线JSON解析](https://www.json.cn/)
-- [Base64 to Hex](https://cryptii.com/pipes/base64-to-hex)
-- [进制转换](https://tool.lu/hexconvert/)
+2. [在线JSON解析](https://www.json.cn/)
+3. [Base64 to Hex](https://cryptii.com/pipes/base64-to-hex)
+4. [进制转换](https://tool.lu/hexconvert/)

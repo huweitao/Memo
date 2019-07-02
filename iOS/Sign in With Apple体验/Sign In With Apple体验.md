@@ -45,7 +45,7 @@ WWDC 2019 Apple 公布了 Sign In With Apple 框架(详情见[链接](https://de
 2. demo演示，下载地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 ![](./demo_gif.gif)
 
-3. Token验签与解析可参考另外一篇文章()
+3. Apple 下发的 Token 验证与解析可参考另外一篇[文章](https://github.com/huweitao/Memo/blob/master/iOS/Sign%20in%20With%20Apple%E6%8E%88%E6%9D%83%E5%8E%9F%E7%90%86/Sign%20in%20With%20Apple%E6%8E%88%E6%9D%83%E5%8E%9F%E7%90%86.md)
 
 
 ## 最后总结
@@ -53,12 +53,12 @@ WWDC 2019 Apple 公布了 Sign In With Apple 框架(详情见[链接](https://de
 
 ## 参考资料
 1. [苹果表示iOS 13使用Apple登录按钮比输入密码更加安全](http://www.sohu.com/a/320191816_586435?scm=1002.0.0.0-0)
-- [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
-- [Sign-in-with-Apple for web pages](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
-- [Q & A for Sign In With Apple](https://techcrunch.com/2019/06/07/answers-to-your-burning-questions-about-how-sign-in-with-apple-works/)
-- [NativeScript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)
-- [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
+2. [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
+3. [Sign-in-with-Apple for web pages](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
+4. [Q & A for Sign In With Apple](https://techcrunch.com/2019/06/07/answers-to-your-burning-questions-about-how-sign-in-with-apple-works/)
+5. [NativeScript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)
+6. [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
 
 ## 下载链接
 1. WWDC 2019提供的新版macOS, XCode, iOS [下载链接](https://developer.apple.com/download/#ios-restore-images-iphone-new)
-- Sign In with Apple offical demo project [download](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
+2. Sign In with Apple offical demo project [download](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
