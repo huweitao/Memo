@@ -1,20 +1,17 @@
-# Sign in with Apple体验
+# Sign In With Apple体验
 
 ## 功能背景
-WWDC 2019 Apple 公布了“Sign In with Apple”框架(详情见[video](https://developer.apple.com/videos/play/wwdc2019/706/))，可通过 Face ID/Touch ID/密码 验证来创建账户并保证不泄露用户隐私信息。每次通过“Sign In with Apple”登录时，可以选择实际邮箱或者创建一个随机邮箱（随机邮箱的邮件会转发至用户实际邮箱）；且用户可以随时删除已创建的随机邮箱。新版苹果审核条例明确要求符合条件的APP接入"Sign In with Apple"：[Updates to the App Store Review Guidelines](https://developer.apple.com/news/?id=06032019j)。
+WWDC 2019 Apple 公布了 Sign In With Apple 框架(详情见[链接](https://developer.apple.com/videos/play/wwdc2019/706/))，可通过 Face ID/Touch ID/password 验证来创建账户并保证不泄露用户隐私信息。每次通过 Sign In With Apple 登录时，可以选择实际邮箱或者创建一个随机邮箱（随机邮箱的邮件会转发至用户实际邮箱）；且用户可以随时删除已创建的随机邮箱。新版苹果审核条例明确要求符合条件的APP接入 Sign In With Apple：[Updates to the App Store Review Guidelines](https://developer.apple.com/news/?id=06032019j)。
 ## 功能特性
 [官网介绍](https://developer.apple.com/sign-in-with-apple/)
 ![](./ppt_signin_content.png)
 
-1. Better user experience：Streamlined account setup和Verified email addresses强调提供更好的用户体验；
-2. Higher level security：Built-in security和Anti-fraud强调系统提供账号安全验证机制；
-3. Multiply-platform：通过统一ID提供便捷的关联多平台数据的能力（包括网页）；
+1. Better user experience: Streamlined account setup和Verified email addresses 强调提供更好的用户体验；
+2. Higher level security: Built-in security和Anti-fraud 强调系统提供账号安全验证机制；
+3. Multiply-platform: 通过统一ID提供便捷的关联多平台数据的能力（包括网页）；
 
 ## 功能分析
-多数资料分析Sign in With Apple是基于OAuth2.0协议，实际上[AuthenticationServices](https://developer.apple.com/documentation/authenticationservices?language=objc)确实是标准的OAuth协议，app和浏览器可通过协议共享用户数据，属于SSO模式（单点登录）。资料包括：[nativescript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)，[[App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)。
-
-## 问题答疑
-[链接](https://techcrunch.com/2019/06/07/answers-to-your-burning-questions-about-how-sign-in-with-apple-works/)
+从 [AuthenticationServices](https://developer.apple.com/documentation/authenticationservices?language=objc) 文档和 [Sign In with Apple REST API](https://developer.apple.com/documentation/signinwithapplerestapi) 定义的接口和返回参数能知道，Sign In With Apple 实际上是基于 OAuth2.0 协议的第三方授权模式。app和浏览器可通过协议共享用户数据，适用于分布式站点的单点登录（SSO）场景。
 
 ## 现有影响
 ### 对用户
@@ -28,7 +25,7 @@ WWDC 2019 Apple 公布了“Sign In with Apple”框架(详情见[video](https:/
 1. 增加接入和维护成本：framework接入，需要授权，与现有账号体系不相同，需要添加兼容逻辑
 2. 获取的用户数据变少：只有ID/姓名/email
 3. 减少虚假账号：开通Apple登录需要FaceID/TouchID验证
-4. Apple登录UI需要遵循Apple的设计原则：[链接](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
+4. Apple登录的UI需要遵循Apple的设计原则（强制）：[链接](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
 
 ## 接入步骤
 ![](integration.png)
@@ -44,9 +41,11 @@ WWDC 2019 Apple 公布了“Sign In with Apple”框架(详情见[video](https:/
 3. 对国内已有成熟账号体的APP系贡献不大：返回用户信息数据过于简单，对于有风控需求的APP，Apple这套授权登录体系对开发者（服务提供商）显得过于单薄。
 
 ## 参考Demo
+1. [Start Sign In with Apple](https://developer.apple.com/sign-in-with-apple/get-started/)
+2. demo演示，下载地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 ![](./demo_gif.gif)
 
-Demo地址：[链接](https://github.com/huweitao/AppleSampleJuice)
+3. Token验签与解析可参考另外一篇文章()
 
 
 ## 最后总结
@@ -54,10 +53,12 @@ Demo地址：[链接](https://github.com/huweitao/AppleSampleJuice)
 
 ## 参考资料
 1. [苹果表示iOS 13使用Apple登录按钮比输入密码更加安全](http://www.sohu.com/a/320191816_586435?scm=1002.0.0.0-0)
-2. [Sign In with Apple - 使用苹果账号登录你的应用](https://xiaozhuanlan.com/topic/8675913204)
-3. [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
-4. [Sign-in-with-Apple for web pages](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
+- [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
+- [Sign-in-with-Apple for web pages](https://developer.okta.com/blog/2019/06/04/what-the-heck-is-sign-in-with-apple)
+- [Q & A for Sign In With Apple](https://techcrunch.com/2019/06/07/answers-to-your-burning-questions-about-how-sign-in-with-apple-works/)
+- [NativeScript](https://www.nativescript.org/blog/ios-13-sign-in-with-apple-ipados-and-arkit-3-all-on-nativescript)
+- [App Makers Are Mixed on ‘Sign In With Apple’](https://www.wired.com/story/sign-in-with-apple-mixed-reactions/)
 
 ## 下载链接
 1. WWDC 2019提供的新版macOS, XCode, iOS [下载链接](https://developer.apple.com/download/#ios-restore-images-iphone-new)
-2. Sign In with Apple offical demo project [download](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
+- Sign In with Apple offical demo project [download](https://developer.apple.com/documentation/authenticationservices/adding_the_sign_in_with_apple_flow_to_your_app)
