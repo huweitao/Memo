@@ -24,9 +24,7 @@ JWT由三部分组成：
 
 
 ## Sign In With Apple JWT解析
-从 Apple 授权接口返回的数据中与身份验证有关的
-
-1. Sign In With Apple 返回的JWT结构：
+1. Sign In With Apple 返回的JWT内容如下：
 
 		eyJraWQiOiJBSURPUEsxIiwiYWxnIjoiUlMyNTYifQ.eyJpc3MiOiJodHRwczovL2FwcGxlaWQuYXBwbGUuY29tIiwiYXVkIjoiY29tLmV4YW1wbGUuYXBwbGUtc2FtcGxlY29kZS5qdWljZUhDOFJFMlJWODYiLCJleHAiOjE1NjE5NzMxMDgsImlhdCI6MTU2MTk3MjUwOCwic3ViIjoiMDAwODA2LmU3ZGIzOGMwYjgzOTQyZGJiYmZkNjI2ODFlM2FkOTIyLjAzMTgifQ.GDZ2iGD7qOxRAsrPv7CWiaWFMB1oY-pvpL4IgcU2iF2hBFBHIFXG1fuDqmNEOYVUE03lp3KiPe4NbxJ0FKeHagKSfv-xV-w-34ARqHkZidPAQxQwMSIyyqQwj4NA0k5jz4xUs3JMt76m8BufdfSXPPqrMZrvMw4HrBgqjrBFg83dGmp3zDf1GJuG5qMG5r-yuSZewbQT2aMTRalm-7078fpm5G81tOKyPK8mw5gE4V5tY4SIhK0_BkFPE6Y2fxExp7KtJXUjxATLAqUB7Lpg6-v7UtoOW5n_CBsTijFtilraQOQMF7ASsuhCGHZGMu-XbAr-BDqPDXlP2QD-M4cjHA	
 		
@@ -55,6 +53,8 @@ keys中的字段说明可以从 [Apple JWTSet](https://developer.apple.com/docum
 3. 运行方式如下：
 	
 		python AppleAuthVerify.py jwt aud
+		
+![](./AppleJWTVerified.gif)
 
 ## 参考资料
 1. [JWT入门](http://www.ruanyifeng.com/blog/2018/07/json_web_token-tutorial.html)
