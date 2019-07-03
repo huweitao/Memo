@@ -4,7 +4,7 @@
 尽管WWDC 2019上已经介绍过Sign In With Apple在app中的接入方式，但是对于接口返回的数据有什么用，怎么用都没有提及和说明。本文就从接口的返回的数据分析Apple的授权原理与这种模式的安全性。
 
 ## Sign In With Apple返回数据结构
-Sign In With Apple返回的数据是一个类 [ASAuthorizationAppleIDCredential](https://developer.apple.com/documentation/authenticationservices/asauthorizationappleidcredential)，其中比较重要的就是 identityToken 和 authorizationCode 两个字段。对于 identityToken 字段的解释就是JWT
+Sign In With Apple返回的数据是一个类 [ASAuthorizationAppleIDCredential](https://developer.apple.com/documentation/authenticationservices/asauthorizationappleidcredential)，其中比较重要的就是 identityToken 和 authorizationCode 两个字段。文档对于 identityToken 字段的说明就是JWT（类似Access Token），对于 authorizationCode 的说明是授权码，JS-SDK 通过这个字段获取token。
 
 ## 相关概念
 Sign In With Apple通过下发 JSON Web Token 来授权第三方app登录的模式与OAuth2.0框架提供的授权概念很相似：第三方获取到的 Access Token 只能在有限时间内访问指定的资源。结合 OAuth2.0 的[四种授权模式](http://www.ruanyifeng.com/blog/2019/04/oauth-grant-types.html)和 [Endpoints](https://developer.apple.com/documentation/signinwithapplerestapi) 文档提供的接口和返回参数，能判断 Apple 使用的是OAuth2.0的第一种授权方式：authorization-code 。
